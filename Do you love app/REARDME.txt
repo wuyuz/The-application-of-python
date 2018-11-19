@@ -1,0 +1,22 @@
+1、这是一个 喜欢我吗？的软件，就是用来逗女孩子喜欢的软件，没有什么难度
+2、不足：
+        2.1在喜欢-->确定后输入微信 怎么反馈部分没有写好。
+        2.3在主程序里面的图片导入，感觉有点累赘，整个代码还可以修改一下
+
+
+3、知识点补充：和总结：
+        打包过程需要安装pyinstaller
+        在主程序所在的文件下打开cmd 输入： pyinstaller -F -w -i 图标.ico  主程序.py
+
+
+        生成图标的在线网址：www.bitbug.net
+
+4、 需要注意的是在生成icon.py文件时，是通过一下代码将图片编码的：
+    import base64
+    open_icon = open("图片名","rb")
+    b64str = base64.b64encode(open_icon.read())
+    open_icon.close()
+    write_data = "img = %s" % b64str
+    f = open("icon.py","w+")
+    f.write(wrte_data)
+    f.close()
