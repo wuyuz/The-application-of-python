@@ -1,3 +1,5 @@
+# 计算多项式的根 
+
 from numpy import roots
 from tkinter import *
 
